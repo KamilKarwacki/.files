@@ -4,6 +4,9 @@
 # distro and clone all required repos and install all software to create my personal development
 # enviroment
 
+cd ~
+sudo apt-get update -qq
+
 # first some basic utilities that are needed
 apt-get install git cmake
 # regolith specific things
@@ -34,3 +37,11 @@ apt install regolith-compositor-picom-glx
 ln -s ${HOME}/.files/regolith2 ${HOME}/.config
 # and maybe refresh the look
 regolith-look refresh
+
+
+# lets try to install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# add path to bashrc
+cat "export PATH=\$PATH:${HOME}/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin" >> .bashrc
+# install bacon
+cargo install --locked bacon

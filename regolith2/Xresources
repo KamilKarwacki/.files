@@ -1,5 +1,5 @@
-regolith.wallpaper.file: ${HOME}/.wallpapers/regolith_wallpaper_file
-regolith.lockscreen.wallpaper.file: ${HOME}/.wallpapers/regolith_lockscreen_wallpaper_file
+regolith.wallpaper.file: ~/.wallpapers/regolith_wallpaper_file
+regolith.lockscreen.wallpaper.file: ~/.wallpapers/regolith_lockscreen_wallpaper_file
 
 ! i3 gaps
 i3-wm.gaps.inner.size:8
