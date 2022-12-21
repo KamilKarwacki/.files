@@ -1,0 +1,6 @@
+#!/bin/bash
+
+WALLPAPER_DIR="$HOME/.wallpapers"
+
+cp $1 "${WALLPAPER_DIR}/regolith_wallpaper_file"
+regolith-look refresh
