@@ -20,9 +20,7 @@ sudo apt-get install regolit-look-*
 # lets start with neovim 
 # first lets create a software folder and clone git 
 
-if [ ! -d "software/nvim" ] 
-then
-
+if [ ! -d "software/nvim" ]; then
 	mkdir software 
 	cd software
 	wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
@@ -35,8 +33,11 @@ then
 	source .bashrc
 fi
 
-# now get my dotfiles and create a symlink to .config
-ln -s ${HOME}/.files/nvim ${HOME}/.config
+#create symbolic link for neovim
+if [ ! -L "${HOME}/.config/nvim" ]; then
+  ln -s "${HOME}/.files/nvim" "${HOME}/.config"
+fi
+
 
 # clone wallpaper repo and put into .wallpapers
 if [ ! -d ".wallpapers" ] 
@@ -44,13 +45,15 @@ then
 	git clone git@github.com:KamilKarwacki/wallpapers.git
 	mv wallpapers .wallpapers
 fi
-#
+
 
 # next the regolith stuff 
 # install picom
 sudo apt install regolith-compositor-picom-glx
 # create symlink from dotfiles
-ln -s ${HOME}/.files/regolith2 ${HOME}/.config
+if [ ! -L "${HOME}/.config/regolith2" ]; then
+  ln -s ${HOME}/.files/regolith2 ${HOME}/.config
+fi
 # and maybe refresh the look
 regolith-look refresh
 
