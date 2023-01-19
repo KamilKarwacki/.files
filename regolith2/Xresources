@@ -4,5 +4,4 @@ regolith.lockscreen.wallpaper.file: ~/.wallpapers/regolith_lockscreen_wallpaper_
 ! i3 gaps
 i3-wm.gaps.inner.size:8
 i3-wm.gaps.outer.size:0
-!regolith.look.path: /usr/share/regolith-look/dracula
 regolith.look.path: /usr/share/regolith-look/gruvbox
