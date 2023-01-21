@@ -33,6 +33,7 @@ if [ ! -d "software/nvim" ]; then
 	echo "export PATH=\$PATH:\${HOME}/software/nvim/bin" >> .bashrc
   echo "alias vim=nvim" >> .bashrc
 	source .bashrc
+  echo "IMPORTANT ----------------------- you need to source packer :so and do :Packersync----------------"
 fi
 
 #create symbolic link for neovim
@@ -60,9 +61,11 @@ regolith-look refresh
 
 
 # lets try to install rust
-#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-# add path to bashrc
-#echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
-#source .bashrc
-# install bacon
-#cargo install --locked bacon
+if ! command -v cargo &> /dev/null ; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  # add path to bashrc
+  echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
+  source .bashrc
+  #install bacon
+  cargo install --locked bacon
+fi
