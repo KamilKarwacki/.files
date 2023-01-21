@@ -13,12 +13,14 @@ cd ${HOME}
 sudo apt-get update -qq
 
 # first some basic utilities that are needed
-sudo apt-get install git cmake
-# regolith specific things
-sudo apt-get install regolit-look-*
+sudo apt-get install git cmake htop
 
 # lets start with neovim 
 # first lets create a software folder and clone git 
+if [ ! -f "./.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi
 
 if [ ! -d "software/nvim" ]; then
 	mkdir software 
@@ -40,21 +42,20 @@ fi
 
 
 # clone wallpaper repo and put into .wallpapers
-if [ ! -d ".wallpapers" ] 
-then
+if [ ! -d ".wallpapers" ]; then
 	git clone git@github.com:KamilKarwacki/wallpapers.git
 	mv wallpapers .wallpapers
 fi
 
 
 # next the regolith stuff 
+sudo apt-get install regolith-look-gruvbox
 # install picom
-sudo apt install regolith-compositor-picom-glx
+sudo apt-get install regolith-compositor-picom-glx
 # create symlink from dotfiles
-if [ ! -L "${HOME}/.config/regolith2" ]; then
-  ln -s ${HOME}/.files/regolith2 ${HOME}/.config
-fi
-# and maybe refresh the look
+rm -r ${HOME}/.config/regolith2
+ln -s ${HOME}/.files/regolith2 ${HOME}/.config
+# and refresh the look
 regolith-look refresh
 
 
