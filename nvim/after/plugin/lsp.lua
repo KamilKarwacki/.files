@@ -4,10 +4,11 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
   'rust_analyzer',
-  'sumneko_lua',
-  'clangd',
+  'clangd'
 })
 
+-- presets by primeagen watch video 
+-- to understand what this does exactly
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({

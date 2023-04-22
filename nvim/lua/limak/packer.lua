@@ -16,10 +16,11 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
   
   -- better than the regolith default
-  use 'ellisonleao/gruvbox.nvim'
-  -- use 'folke/tokyonight.nvim'
+  use 'folke/tokyonight.nvim'
+  use 'Mofiqul/dracula.nvim'
 
   -- game from theprimeagen
   use 'ThePrimeagen/vim-be-good'
