@@ -1,4 +1,4 @@
 require("limak.set")
 require("limak.remap")
---require("limak.lsp")
+require("limak.lsp")
 print("init.lua ran successfully")

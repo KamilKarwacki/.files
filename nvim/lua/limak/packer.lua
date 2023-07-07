@@ -46,6 +46,7 @@ return require('packer').startup(function(use)
     -- Snippets
     {'L3MON4D3/LuaSnip'},             -- Required
     {'rafamadriz/friendly-snippets'}, -- Optional
+    {'ianding1/leetcode.vim'},
   }
 }
 
@@ -57,15 +58,17 @@ return require('packer').startup(function(use)
   }
   -- treesitter
   use('nvim-treesitter/nvim-treesitter',{run = ':TSUpdate'})
+  --harpoon by primeagen
   use('theprimeagen/harpoon')
-  use('mbbill/undotree')  
+  --undo tree to go back and forth 
+  use('mbbill/undotree')
   use('tpope/vim-fugitive')
+
+  -- codeium  use 'Exafunction/codeium.vim'
+
+
   -- rust 
   use 'simrat39/rust-tools.nvim'
-
-
-  -- auto-completion c++
-  -- use 'ranjithshegde/ccls.nvim'
  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
