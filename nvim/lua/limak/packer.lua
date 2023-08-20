@@ -17,8 +17,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  
-  -- better than the regolith default
+  -- better than the regolith default, some nice color themes
   use 'folke/tokyonight.nvim'
   use 'Mofiqul/dracula.nvim'
 
@@ -46,9 +45,8 @@ return require('packer').startup(function(use)
     -- Snippets
     {'L3MON4D3/LuaSnip'},             -- Required
     {'rafamadriz/friendly-snippets'}, -- Optional
-    {'ianding1/leetcode.vim'},
   }
-}
+  }
 
   -- fuzzy finder
   use {
@@ -63,13 +61,20 @@ return require('packer').startup(function(use)
   --undo tree to go back and forth 
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  -- C++ stuff
+  -- cmake integration
+  use('cdelledonne/vim-cmake')
+
+  -- C++ stuff end
+
+  -- fun stuff
+  use('ianding1/leetcode.vim')
 
   -- codeium  use 'Exafunction/codeium.vim'
 
-
   -- rust 
   use 'simrat39/rust-tools.nvim'
- 
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
