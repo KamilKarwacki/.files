@@ -7,5 +7,5 @@ wm.gaps.outer.size:0
 
 
  
-!regolith.look.path: /usr/share/regolith-look/blackhole
+!regolith.look.path: /usr/share/regolith-look/ayu-dark
 regolith.look.path: /usr/share/regolith-look/blackhole
