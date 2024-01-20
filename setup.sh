@@ -54,8 +54,8 @@ sudo apt-get install regolith-look-gruvbox
 # install picom
 sudo apt-get install regolith-compositor-picom-glx
 # create symlink from dotfiles
-rm -r ${HOME}/.config/regolith2
-ln -s ${HOME}/.files/regolith2 ${HOME}/.config
+rm -r ${HOME}/.config/regolith3
+ln -s ${HOME}/.files/regolith3 ${HOME}/.config
 # and refresh the look
 regolith-look refresh
 
@@ -64,8 +64,8 @@ regolith-look refresh
 if ! command -v cargo &> /dev/null ; then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   # add path to bashrc
-  echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
-  source .bashrc
+  #echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
+  source .cargo/env
   #install bacon
   cargo install --locked bacon
 fi

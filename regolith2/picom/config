@@ -127,7 +127,7 @@ blur-size= 5;
 
 
 opacity-rule = [
-  "85:class_g = 'Gnome-terminal'"
+  "80:class_g = 'Gnome-terminal'"
 ]
 
 #################################
@@ -137,9 +137,9 @@ opacity-rule = [
 #################################
 
 # Fade windows during opacity changes.
-fading = false;
+fading = true;
 # The time between steps in a fade in milliseconds. (default 10).
-fade-delta = 1;
+fade-delta = 3;
 # Opacity change between steps while fading in. (default 0.028).
 fade-in-step = 0.03;
 # Opacity change between steps while fading out. (default 0.03).

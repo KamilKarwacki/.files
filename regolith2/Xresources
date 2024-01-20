@@ -1,9 +1,11 @@
-!regolith.wallpaper.file: ~/.wallpapers/regolith_wallpaper_file
+regolith.wallpaper.file: ~/.wallpapers/regolith_wallpaper_file
 !regolith.lockscreen.wallpaper.file: ~/.wallpapers/regolith_lockscreen_wallpaper_file
 
 ! i3 gaps
 wm.gaps.inner.size:8
 wm.gaps.outer.size:0
+
+
  
-!regolith.look.path: /usr/share/regolith-look/lascaille
+!regolith.look.path: /usr/share/regolith-look/blackhole
 regolith.look.path: /usr/share/regolith-look/blackhole

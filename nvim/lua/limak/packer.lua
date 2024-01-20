@@ -20,9 +20,13 @@ return require('packer').startup(function(use)
   -- better than the regolith default, some nice color themes
   use 'folke/tokyonight.nvim'
   use 'Mofiqul/dracula.nvim'
+  use 'dasupradyumna/midnight.nvim'
 
   -- game from theprimeagen
   use 'ThePrimeagen/vim-be-good'
+
+  -- tmux 
+  use 'christoomey/vim-tmux-navigator'
 
   -- lsp stuff
   use {

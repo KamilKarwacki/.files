@@ -2,5 +2,10 @@
 
 WALLPAPER_DIR="$HOME/.wallpapers"
 
-cp $1 "${WALLPAPER_DIR}/regolith_wallpaper_file"
-regolith-look refresh
+if [ "$#" -eq 1 ]; then
+    cp $1 "${WALLPAPER_DIR}/regolith_wallpaper_file"
+else
+    files=($(find ${WALLPAPER_DIR} -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \)))
+    random_file=$(shuf -e "${files[@]}" | head -n 1)
+    cp ${random_file} "${WALLPAPER_DIR}/regolith_wallpaper_file" 
+fi
