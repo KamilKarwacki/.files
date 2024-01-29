@@ -13,7 +13,7 @@ cd ${HOME}
 sudo apt-get update -qq
 
 # first some basic utilities that are needed
-sudo apt-get install git cmake htop
+sudo apt-get install git cmake htop g++
 
 # lets start with neovim 
 # first lets create a software folder and clone git 
