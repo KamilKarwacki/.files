@@ -17,6 +17,8 @@ vim.opt.incsearch = true
 
 vim.opt.smartindent = true
 
+vim.opt.scrolloff = 8
+
 -- lines extend to infinity when they are very long
 vim.opt.wrap = false
 

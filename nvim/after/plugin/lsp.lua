@@ -4,7 +4,7 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
   'rust_analyzer',
-  'clangd'
+  'clangd@15.0.6'
 })
 
 -- presets by primeagen watch video 

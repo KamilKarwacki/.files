@@ -70,11 +70,16 @@ return require('packer').startup(function(use)
   use('cdelledonne/vim-cmake')
 
   -- C++ stuff end
+  
+  use 'voldikss/vim-floatterm'
+
+  use 'vimwiki/vimwiki'
 
   -- fun stuff
   use('ianding1/leetcode.vim')
 
   -- codeium  use 'Exafunction/codeium.vim'
+  
 
   -- rust 
   use 'simrat39/rust-tools.nvim'
