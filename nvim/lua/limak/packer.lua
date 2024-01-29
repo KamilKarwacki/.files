@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
 
   -- C++ stuff end
   
-  use 'voldikss/vim-floatterm'
+  use 'voldikss/vim-floaterm'
 
   use 'vimwiki/vimwiki'
 
