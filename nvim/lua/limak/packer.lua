@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+--t This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 local ensure_packer = function()
   local fn = vim.fn
@@ -59,7 +59,7 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   -- treesitter
-  use('nvim-treesitter/nvim-treesitter',{run = ':TSUpdate'})
+  use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.8.5', run = ':TSUpdate'}
   --harpoon by primeagen
   use('theprimeagen/harpoon')
   --undo tree to go back and forth 

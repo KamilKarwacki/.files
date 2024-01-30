@@ -17,7 +17,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     
     disable = function(lang, bufnr)
-      return lang == "cpp" and vim.api.nvim_buf_line_cound(bufnr) > 10000
+      return lang == "cpp" and vim.api.nvim_buf_line_count(bufnr) > 10000
     end,
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

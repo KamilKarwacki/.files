@@ -6,9 +6,11 @@ vim.keymap.set('n', '<leader>ps', function()
               builtin.grep_string({ search = vim.fn.input("Grep > ") });
             end)
 
-
-require("telescope").setup {
+require('telescope').setup{
   defaults = {
-    file_ignore_patterns = {"^build/"}
-  }
+		file_ignore_patterns = {
+			"build",
+			"third_party"
+		}
+	}
 }
