@@ -58,6 +58,10 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- needed for live grep 
+  use 'BurntSushi/ripgrep'
+  use 'sharkdp/fd'
+
   -- treesitter
   use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.8.5', run = ':TSUpdate'}
   --harpoon by primeagen

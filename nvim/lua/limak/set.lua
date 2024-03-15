@@ -36,3 +36,5 @@ vim.opt.updatetime = 50
 -- the sign column shows warnings of lsp 
 -- if not always on, the column jumps back and forth
 vim.opt.signcolumn = "yes"
+
+vim.o.pumheight = 5
