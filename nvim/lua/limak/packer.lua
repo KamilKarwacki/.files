@@ -80,10 +80,9 @@ return require('packer').startup(function(use)
   use 'vimwiki/vimwiki'
 
   -- fun stuff
-  use('ianding1/leetcode.vim')
+  use 'ianding1/leetcode.vim'
 
   -- codeium  use 'Exafunction/codeium.vim'
-  
 
   -- rust 
   use 'simrat39/rust-tools.nvim'
