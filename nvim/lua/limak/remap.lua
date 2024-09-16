@@ -5,6 +5,12 @@ nnoremap("<leader>pv", "<cmd>Ex<CR>")
 -- go to root dir of config
 vim.cmd([[command! Conf tabnew ~/.config/nvim/ | Ex]])
 
+-- Create an autocmd for setting Jenkinsfile syntax to Groovy
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+  pattern = "*[jJ]enkinsfile",
+  command = "set syntax=groovy"
+})
+
 
 
 nnoremap("<leader>te", ":tabedit <cr>")
