@@ -19,4 +19,4 @@ M.vnoremap = bind("v");
 M.xnoremap = bind("x");
 M.inoremap = bind("i");
 
-return M  
+return M
