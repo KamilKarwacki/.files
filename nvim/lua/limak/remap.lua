@@ -3,15 +3,13 @@ local nnoremap = require("limak.keymap").nnoremap
 nnoremap("<leader>pv", "<cmd>Ex<CR>")
 
 -- go to root dir of config
-vim.cmd([[command! Conf tabnew ~/.config/nvim/ | Ex]])
+vim.cmd([[command! Conf tabnew | Ex $HOME/.config/nvim/]])
 
 -- Create an autocmd for setting Jenkinsfile syntax to Groovy
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = "*[jJ]enkinsfile",
   command = "set syntax=groovy"
 })
-
-
 
 nnoremap("<leader>te", ":tabedit <cr>")
 

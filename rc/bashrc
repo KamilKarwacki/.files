@@ -121,10 +121,13 @@ export PATH=$PATH:~/software/nvim/bin
 # gruvbox-factory 
 export PATH=$PATH:~/.local/bin
 # own scripts
-export PATH=$PATH:/home/limak/software/scripts
+export PATH=$PATH:/$HOME/software/scripts
 alias vim=nvim
+alias vimdiff="nvim -d"
 alias sl=ls
+
+# git related stuff
+alias gits="git status"
 
 # rustup path
 export PATH=$PATH:/home/limak/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin
-
