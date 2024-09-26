@@ -41,6 +41,11 @@ if [ ! -L "${HOME}/.config/nvim" ]; then
   ln -s "${HOME}/.files/nvim" "${HOME}/.config"
 fi
 
+#create symbolic link for tmux
+if [ ! -L "${HOME}/.tmux.config" ]; then
+  ln -s "${HOME}/.files/tmux.config" "${HOME}/.tmux.config"
+fi
+
 
 # clone wallpaper repo and put into .wallpapers
 if [ ! -d ".wallpapers" ]; then
