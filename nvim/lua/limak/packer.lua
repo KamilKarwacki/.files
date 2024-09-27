@@ -21,7 +21,8 @@ return require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'Mofiqul/dracula.nvim'
   use 'dasupradyumna/midnight.nvim'
-
+  use 'aktersnurra/no-clown-fiesta.nvim'
+  use 'metalelf0/base16-black-metal-scheme'
   -- game from theprimeagen
   use 'ThePrimeagen/vim-be-good'
 
