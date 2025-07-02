@@ -36,6 +36,9 @@ if [ ! -d "software/nvim" ]; then
   echo "IMPORTANT ----------------------- you need to source packer :so and do :Packersync----------------"
 fi
 
+# how many miliseconds should pass until a key will be pressed twice and second arg is how many keys per second will be repeated
+xset r rate 300 60
+
 #create symbolic link for neovim
 if [ ! -L "${HOME}/.config/nvim" ]; then
   ln -s "${HOME}/.files/nvim" "${HOME}/.config"
@@ -55,22 +58,22 @@ fi
 
 
 # next the regolith stuff 
-sudo apt-get install regolith-look-gruvbox
+sudo apt-get install regolith-look-blackhole
 # install picom
 sudo apt-get install regolith-compositor-picom-glx
 # create symlink from dotfiles
 rm -r ${HOME}/.config/regolith3
 ln -s ${HOME}/.files/regolith3 ${HOME}/.config
 # and refresh the look
-regolith-look refresh
+#regolith-look refresh
 
 
 # lets try to install rust
-if ! command -v cargo &> /dev/null ; then
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  # add path to bashrc
-  #echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
-  source .cargo/env
-  #install bacon
-  cargo install --locked bacon
-fi
+#if ! command -v cargo &> /dev/null ; then
+#  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#  # add path to bashrc
+#  #echo "export PATH=\$PATH:\${HOME}/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin" >> .bashrc
+#  source .cargo/env
+#  #install bacon
+#  cargo install --locked bacon
+#fi
