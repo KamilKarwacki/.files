@@ -24,4 +24,4 @@ vim.opt.background = "dark"
 --  transparent_mode = true,
 --})
 -- vim.cmd([[colorscheme tokyonight-night]])
-vim.cmd([[colorscheme midnight]])
+vim.cmd([[no-clown-fiesta]])
