@@ -5,7 +5,7 @@ regolith.wallpaper.file: ~/.wallpapers/regolith_wallpaper_file
 wm.gaps.inner.size:8
 wm.gaps.outer.size:0
 
-gnome.terminal.font: JetBrains Mono 14
+gnome.terminal.font: JetBrains Mono 16
  
 !regolith.look.path: /usr/share/regolith-look/ayu-dark
 regolith.look.path: /usr/share/regolith-look/blackhole
