@@ -10,9 +10,7 @@ fi
 
 sudo apt-get -y install tmux ripgrep
 #create symbolic link for tmux
-if [ ! -L "/home/KamilKarwacki/.tmux.config" ]; then
-  ln -s /home/KamilKarwacki/.config/coderv2/dotfiles/tmux.config /home/KamilKarwacki/.tmux.config
-fi
+ln -s -f /home/KamilKarwacki/.config/coderv2/dotfiles/tmux.config /home/KamilKarwacki/.tmux.config
 
 sudo ln -f -s /usr/bin/clangd-19 /usr/bin/clangd
 sudo ln -f -s /usr/bin/clang-format-19 /usr/bin/clang-format
