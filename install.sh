@@ -14,6 +14,10 @@ if [ ! -L "/home/KamilKarwacki/.tmux.config" ]; then
   ln -s /home/KamilKarwacki/.config/coderv2/dotfiles/nvim/tmux.config /home/KamilKarwacki/.tmux.config
 fi
 
+sudo ln -f -s /usr/bin/clangd-19 /usr/bin/clangd
+sudo ln -f -s /usr/bin/clang-format-19 /usr/bin/clang-format
+sudo ln -f -s /usr/bin/lldb-dap-19 /usr/bin/lldb-dap
+
 echo "alias gits=\"git status\"" >> ~/.bashrc
 echo "alias sl=ls" >> ~/.bashrc
 echo "alias vim=nvim" >> ~/.bashrc
