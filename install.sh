@@ -14,3 +14,6 @@ if [ ! -L "/home/KamilKarwacki/.tmux.config" ]; then
   ln -s /home/KamilKarwacki/.config/coderv2/dotfiles/nvim/tmux.config /home/KamilKarwacki/.tmux.config
 fi
 
+echo "alias gits=\"git status\"" >> ~/.bashrc
+echo "alias sl=ls" >> ~/.bashrc
+echo "alias vim=nvim" >> ~/.bashrc
