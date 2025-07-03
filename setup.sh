@@ -13,7 +13,7 @@ cd ${HOME}
 sudo apt-get update -qq
 
 # first some basic utilities that are needed
-sudo apt-get install git cmake htop g++
+sudo apt-get install git cmake htop g++ pip python-is-python3 python3-pip
 
 # lets start with neovim 
 # first lets create a software folder and clone git 

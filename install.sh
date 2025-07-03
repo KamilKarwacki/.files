@@ -8,16 +8,12 @@ if [ ! -f "./.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
-sudo apt-get install tmux ripgrep
+sudo apt-get -y install tmux ripgrep
 #create symbolic link for tmux
 if [ ! -L "/home/KamilKarwacki/.tmux.config" ]; then
-  ln -s /home/KamilKarwacki/.config/coderv2/dotfiles/nvim/tmux.config /home/KamilKarwacki/.tmux.config
+  ln -s /home/KamilKarwacki/.config/coderv2/dotfiles/tmux.config /home/KamilKarwacki/.tmux.config
 fi
 
 sudo ln -f -s /usr/bin/clangd-19 /usr/bin/clangd
 sudo ln -f -s /usr/bin/clang-format-19 /usr/bin/clang-format
-sudo ln -f -s /usr/bin/lldb-dap-19 /usr/bin/lldb-dap
-
-echo "alias gits=\"git status\"" >> ~/.bashrc
-echo "alias sl=ls" >> ~/.bashrc
-echo "alias vim=nvim" >> ~/.bashrc
+sudo ln -f -s /usr/bin/lldb-dap-19 /usr/bin/lldb-dap 

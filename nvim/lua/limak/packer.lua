@@ -55,8 +55,7 @@ return require('packer').startup(function(use)
 
   -- fuzzy finder
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    -- or                            , branch = '0.1.x',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   -- needed for live grep 
@@ -64,7 +63,7 @@ return require('packer').startup(function(use)
   use 'sharkdp/fd'
 
   -- treesitter
-  use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.8.5', run = ':TSUpdate'}
+  use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.10.0', run = ':TSUpdate'}
   --harpoon by primeagen
   use('theprimeagen/harpoon')
   --undo tree to go back and forth 
