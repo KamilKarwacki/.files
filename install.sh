@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "running install.sh"
 pwd
-rm -r "${HOME}/.config/nvim"
-ln -s "./nvim" "${HOME}/.config"
+ln -s -f /home/KamilKarwacki/.config/coderv2/dotfiles/nvim /home/KamilKarwacki/.config/
+
