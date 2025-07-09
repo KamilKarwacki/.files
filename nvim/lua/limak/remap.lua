@@ -27,8 +27,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   end,
 })
 
-vim.api.nvim_create_user_command("WipeVimTemp", function()
-  vim.fn.system({ "find", ".", "-type", "f",
-    "-name", "*.swp", "-o", "-name", "*.swo", "-o",
-    "-name", "*~", "-o", "-name", "*.un~", "-delete" })
+
+vim.api.nvim_create_user_command("WipeSwapFiles", function()
+  vim.fn.system({
+    "find", vim.fn.stdpath("state") .. "/swap",
+    "-type", "f", "-name", "*.swp", "-delete"
+  })
 end, {})
