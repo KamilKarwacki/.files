@@ -16,3 +16,19 @@ nnoremap("<leader>te", ":tabedit <cr>")
 -- no need to use shift ; to go into command mode 
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":")
+
+-- auto save when going into normal mode
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.modified and vim.bo.modifiable then
+      vim.cmd("silent write")
+    end
+  end,
+})
+
+vim.api.nvim_create_user_command("WipeVimTemp", function()
+  vim.fn.system({ "find", ".", "-type", "f",
+    "-name", "*.swp", "-o", "-name", "*.swo", "-o",
+    "-name", "*~", "-o", "-name", "*.un~", "-delete" })
+end, {})
