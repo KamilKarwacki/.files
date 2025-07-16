@@ -58,6 +58,11 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- call tree
+  use 'ldelossa/litee.nvim'
+  use 'ldelossa/litee-calltree.nvim'
+
   -- needed for live grep 
   use 'BurntSushi/ripgrep'
   use 'sharkdp/fd'

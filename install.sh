@@ -8,7 +8,7 @@ if [ ! -f "./.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 fi
 
-sudo apt-get -y install tmux ripgrep nodejs ninja-build xclip
+sudo apt-get -y install tmux ripgrep nodejs ninja-build xclip gdb
 #create symbolic link for tmux
 ln -s -f /home/KamilKarwacki/.config/coderv2/dotfiles/tmux.config /home/KamilKarwacki/.tmux.config
 
