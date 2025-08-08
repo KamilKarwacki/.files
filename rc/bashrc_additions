@@ -1,0 +1,6 @@
+alias vim=nvim
+alias vimdiff="nvim -d"
+alias sl=ls
+
+# git related stuff
+alias gits="git status"
