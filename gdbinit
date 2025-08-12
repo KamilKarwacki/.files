@@ -2,6 +2,10 @@ layout next
 set print elements 0
 set auto-load safe-path
 
+# when debugging a python wrapper that calls another thing under the hood 
+set follow-fork-mode child
+set detach-on-fork off
+
 set substitute-path external/llvm-project /home/KamilKarwacki/roof-mlir/third-party/llvm-project
 set substitute-path external/iree /home/KamilKarwacki/roof-mlir/third-party/iree
 set substitute-path external/torch-mlir /home/KamilKarwacki/roof-mlir/third-party/torch-mlir
