@@ -1,7 +1,16 @@
 layout next
 set print elements 0
 set auto-load safe-path
-add-auto-load-safe-path /usr/local/cross/x86_64-linux-gnu/x86_64-linux-gnu/lib64/libstdc++.so.6.0.30-gdb.py
+
+set substitute-path external/llvm-project /home/KamilKarwacki/roof-mlir/third-party/llvm-project
+set substitute-path external/iree /home/KamilKarwacki/roof-mlir/third-party/iree
+set substitute-path external/torch-mlir /home/KamilKarwacki/roof-mlir/third-party/torch-mlir
+set substitute-path external/cpuinfo /home/KamilKarwacki/roof-mlir/third-party/iree/third_party/cpuinfo
+set substitute-path bazel-out /home/KamilKarwacki/roof-mlir/bazel-out
+set substitute-path /proc/self/cwd/external/llvm-project /home/KamilKarwacki/roof-mlir/third-party/llvm-project
+set substitute-path /proc/self/cwd/external/iree /home/KamilKarwacki/roof-mlir/third-party/iree
+set substitute-path external/patio /home/KamilKarwacki/roof-mlir/plugins/compiler
+set substitute-path /proc/self/cwd/external/patio /home/KamilKarwacki/roof-mlir/plugins/compiler
 
 define bsave
     shell rm -f brestore.txt

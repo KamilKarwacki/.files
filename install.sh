@@ -11,7 +11,8 @@ fi
 sudo apt-get update
 sudo apt-get -y install tmux ripgrep nodejs ninja-build xclip gdb
 #create symbolic link for tmux
-ln -s -f $HOME/KamilKarwacki/.config/coderv2/dotfiles/tmux.config $HOME/KamilKarwacki/.tmux.config
+ln -s -f $HOME/.config/coderv2/dotfiles/tmux.config $HOME/.tmux.config
+ln -s -f $HOME/.config/coderv2/dotfiles/gdbinit  $HOME/.gdbinit
 
 sudo ln -f -s /usr/bin/clangd-19 /usr/bin/clangd
 sudo ln -f -s /usr/bin/clang-format-19 /usr/bin/clang-format
