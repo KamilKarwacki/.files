@@ -3,6 +3,9 @@ echo "running install.sh"
 pwd
 ln -s -f $HOME/.config/coderv2/dotfiles/nvim $HOME/.config/
 
+mkdir $HOME/.config/zellij
+ln -s -f $HOME/.config/coderv2/dotfiles/config.kdl $HOME/.config/zellij
+
 if [ ! -f "./.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -19,3 +22,9 @@ sudo ln -f -s /usr/bin/clang-format-19 /usr/bin/clang-format
 sudo ln -f -s /usr/bin/lldb-dap-19 /usr/bin/lldb-dap 
 
 cat ./rc/bashrc_additions >> $HOME/.bashrc
+
+# install zellij
+wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
+rm zellij-x86_64-unknown-linux-musl.tar.gz
+sudo mv zellij /usr/bin

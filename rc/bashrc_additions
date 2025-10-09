@@ -4,3 +4,11 @@ alias sl=ls
 
 # git related stuff
 alias gits="git status"
+
+export PATH=$PATH:${HOME}/.config/coderv2/dotfiles/scripts
+
+if [ -f $HOME/.config/coderv2/dotfiles/rc/bashrc_functions ]; then
+    source $HOME/.config/coderv2/dotfiles/rc/bashrc_functions
+fi
+
+set -o vi

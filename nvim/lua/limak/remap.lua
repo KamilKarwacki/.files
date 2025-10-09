@@ -13,6 +13,8 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
 
 nnoremap("<leader>te", ":tabedit <cr>")
 
+vim.keymap.set("v", "<leader>y", '"+y', {desc = "Copy to system clip board"})
+
 -- no need to use shift ; to go into command mode 
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":")
@@ -28,9 +30,21 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 
-vim.api.nvim_create_user_command("WipeSwapFiles", function()
+-- deletes all swap files
+vim.api.nvim_create_user_command("RemoveSwapFiles", function()
   vim.fn.system({
     "find", vim.fn.stdpath("state") .. "/swap",
     "-type", "f", "-name", "*.swp", "-delete"
   })
 end, {})
+
+-- copies current full file path to clipboard
+vim.api.nvim_create_user_command(
+  "CopyFileName",
+  function()
+    vim.cmd('let @+ = expand("%:p")')
+  end,
+  {}
+)
+
+

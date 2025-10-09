@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
   use 'BurntSushi/ripgrep'
   use 'sharkdp/fd'
 
+  -- file explorer
+  use 'stevearc/oil.nvim'
+
   -- treesitter
   use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.10.0', run = ':TSUpdate'}
   --harpoon by primeagen

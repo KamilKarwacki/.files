@@ -1,0 +1,12 @@
+function activate_venv_up() {
+    local dir="$PWD"
+    while [ "$dir" != "/" ]; do
+        if [ -f "$dir/.venv/bin/activate" ]; then
+            source "$dir/.venv/bin/activate"
+            echo "Activated virtualenv at $dir/.venv"
+            return
+        fi
+        dir="$(dirname "$dir")"
+    done
+    echo "No .venv found in parent directories."
+}
