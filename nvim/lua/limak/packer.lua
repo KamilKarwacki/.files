@@ -13,12 +13,15 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   -- better than the regolith default, some nice color themes
   use 'folke/tokyonight.nvim'
+  use 'bluz71/vim-moonfly-colors'
   use 'Mofiqul/dracula.nvim'
   use 'dasupradyumna/midnight.nvim'
   use 'aktersnurra/no-clown-fiesta.nvim'
@@ -29,35 +32,16 @@ return require('packer').startup(function(use)
   -- tmux 
   use 'christoomey/vim-tmux-navigator'
 
-  -- lsp stuff
-  use {
-  'VonHeikemen/lsp-zero.nvim',
-  branch = 'v1.x',
-  requires = {
-    -- LSP Support
-    {'neovim/nvim-lspconfig'},             -- Required
-    {'williamboman/mason.nvim'},           -- Optional
-    {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-    -- Autocompletion
-    {'hrsh7th/nvim-cmp'},         -- Required
-    {'hrsh7th/cmp-nvim-lsp'},     -- Required
-    {'hrsh7th/cmp-buffer'},       -- Optional
-    {'hrsh7th/cmp-path'},         -- Optional
-    {'saadparwaiz1/cmp_luasnip'}, -- Optional
-    {'hrsh7th/cmp-nvim-lua'},     -- Optional
-
-    -- Snippets
-    {'L3MON4D3/LuaSnip'},             -- Required
-    {'rafamadriz/friendly-snippets'}, -- Optional
-  }
-  }
-
   -- fuzzy finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use 'neovim/nvim-lspconfig'
+
+  -- codex integration
+  use 'johnseth97/codex.nvim'
 
   -- call tree
   use 'ldelossa/litee.nvim'
@@ -77,23 +61,13 @@ return require('packer').startup(function(use)
   --undo tree to go back and forth 
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  -- C++ stuff
-  -- cmake integration
-  use('cdelledonne/vim-cmake')
 
-  -- C++ stuff end
-  
   use 'voldikss/vim-floaterm'
 
   use 'vimwiki/vimwiki'
 
   -- fun stuff
   use 'ianding1/leetcode.vim'
-
-  -- codeium  use 'Exafunction/codeium.vim'
-
-  -- rust 
-  use 'simrat39/rust-tools.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
