@@ -28,3 +28,4 @@ wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_6
 tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
 rm zellij-x86_64-unknown-linux-musl.tar.gz
 sudo mv zellij /usr/bin
+

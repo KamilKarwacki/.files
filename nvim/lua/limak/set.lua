@@ -38,3 +38,5 @@ vim.opt.updatetime = 50
 vim.opt.signcolumn = "yes"
 
 vim.o.pumheight = 5
+
+vim.opt.winborder = "rounded"

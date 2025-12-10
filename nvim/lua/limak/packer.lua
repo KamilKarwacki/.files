@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
   }
 
   use 'neovim/nvim-lspconfig'
+  use 'mason-org/mason.nvim'
 
   -- codex integration
   use 'johnseth97/codex.nvim'
