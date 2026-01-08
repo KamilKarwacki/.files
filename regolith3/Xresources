@@ -1,11 +1,11 @@
 regolith.wallpaper.file: ~/.wallpapers/regolith_wallpaper_file
-!regolith.lockscreen.wallpaper.file: ~/.wallpapers/regolith_lockscreen_wallpaper_file
+regolith.lockscreen.wallpaper.file: ~/.wallpapers/regolith_lockscreen_wallpaper_file
 
 ! i3 gaps
 wm.gaps.inner.size:8
 wm.gaps.outer.size:0
 
-gnome.terminal.font: JetBrains Mono 16
+gnome.terminal.font: JetBrains Mono 22
  
 !regolith.look.path: /usr/share/regolith-look/ayu-dark
 regolith.look.path: /usr/share/regolith-look/blackhole

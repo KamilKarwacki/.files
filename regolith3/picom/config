@@ -127,7 +127,8 @@ blur-size= 5;
 
 
 opacity-rule = [
-  "80:class_g = 'Gnome-terminal'"
+  "95:class_g = 'Gnome-terminal'",
+  "95:class_g = 'Alacritty'"
 ]
 
 #################################
