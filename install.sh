@@ -3,6 +3,8 @@ echo "running install.sh"
 pwd
 ln -s -f $HOME/.config/coderv2/dotfiles/nvim $HOME/.config/
 
+ln -s -f $HOME/.config/coderv2/dotfiles/fish_coder $HOME/.config/fish
+
 mkdir $HOME/.config/zellij
 ln -s -f $HOME/.config/coderv2/dotfiles/config.kdl $HOME/.config/zellij
 
@@ -31,3 +33,11 @@ sudo mv zellij /usr/bin
 
 # codex
 sudo npm i -g @openai/codex
+
+# estup fish 
+if grep -Fq "exec fish" ~/.bashrc; then
+  echo "fish already setup, skipping"
+else
+   echo -e "\nexec fish\n" >> ~/.bashrc
+fi
+

@@ -16,6 +16,18 @@ set -x PATH $PATH $HOME/software/zig
 set -x PATH $PATH $HOME/software/FlameGraph
 set -x PATH $PATH /home/kamil/fun/compilers/llvm-project/build/bin
 
+function fish_prompt
+    set_color 202
+    echo -n (whoami)"@"(hostname -s)
+    set_color normal
+    echo -n ":"(prompt_pwd)"$ "
+end
+
+
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv | source)
+source $HOME/.local/bin/env
+
+
 
 
 
