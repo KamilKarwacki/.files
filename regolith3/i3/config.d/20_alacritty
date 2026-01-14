@@ -1,4 +1,0 @@
-# Use Alacritty instead of 
-# gnome-terminal
-bindsym $mod+Return exec alacritty
-

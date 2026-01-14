@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/alacritty/alacritty.toml"
+
+if [[ ! -f "$CONFIG" ]]; then
+  echo "ERROR: alacritty config not found at $CONFIG" >&2
+  exit 1
+fi
+
+if [[ -n "$1" ]]; then
+  SIZE="$1"
+else
+  read -rp "Enter font size: " SIZE
+fi
+
+# basic validation
+if ! [[ "$SIZE" =~ ^[0-9]+([.][0-9]+)?$ ]]; then
+  echo "ERROR: invalid font size: $SIZE" >&2
+  exit 1
+fi
+
+# replace only the font.size line
+sed -i -E "s/^(size[[:space:]]*=[[:space:]]*).*/\1$SIZE/" "$CONFIG"
+
+echo "Alacritty font size set to $SIZE"
+
