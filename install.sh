@@ -12,7 +12,7 @@ if [ ! -f "./.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
 fi
 
 sudo apt-get update
-sudo apt-get -y install tmux ripgrep nodejs ninja-build xclip gdb
+sudo apt-get -y install tmux ripgrep nodejs ninja-build xclip gdb fish npm
 #create symbolic link for tmux
 ln -s -f $HOME/.config/coderv2/dotfiles/tmux.config $HOME/.tmux.config
 ln -s -f $HOME/.config/coderv2/dotfiles/gdbinit  $HOME/.gdbinit
@@ -29,3 +29,5 @@ tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
 rm zellij-x86_64-unknown-linux-musl.tar.gz
 sudo mv zellij /usr/bin
 
+# codex
+sudo npm i -g @openai/codex
