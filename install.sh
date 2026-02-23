@@ -31,6 +31,9 @@ tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
 rm zellij-x86_64-unknown-linux-musl.tar.gz
 sudo mv zellij /usr/bin
 
+# uv 
+wget -qO- https://astral.sh/uv/install.sh | sh
+
 # codex
 sudo npm i -g @openai/codex
 
