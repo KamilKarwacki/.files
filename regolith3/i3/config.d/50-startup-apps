@@ -1,0 +1,11 @@
+# Send Slack to workspace 3
+assign [class="Slack"] 3
+
+# Launch Slack on login
+exec --no-startup-id slack
+
+# Send teams-for-linux
+assign [class="teams-for-linux"] 8
+
+# Launch Slack on login
+exec --no-startup-id teams-for-linux
