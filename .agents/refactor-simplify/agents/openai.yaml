@@ -1,0 +1,7 @@
+interface:
+  display_name: "Refactor Simplify"
+  short_description: "Simplify changed code via assumption analysis."
+  default_prompt: "Use $refactor-simplify to analyze my git diff against main, surface assumption mismatches, and propose simplifications before applying edits."
+
+policy:
+  allow_implicit_invocation: true

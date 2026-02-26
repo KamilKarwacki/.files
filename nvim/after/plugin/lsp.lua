@@ -1,5 +1,6 @@
 require("mason").setup()
-vim.lsp.enable('pyright', 'clangd')
+vim.lsp.enable('pyright')
+vim.lsp.enable('clangd')
 
 vim.lsp.enable({
       name = 'pyright',

@@ -11,5 +11,3 @@ set -gx PATH $PATH $HOME/.config/coderv2/dotfiles/scripts
 source $HOME/.local/bin/env.fish
 
 fish_vi_key_bindings
-
-
