@@ -1,0 +1,23 @@
+sudo apt-add-repository -y ppa:fish-shell/release-4
+sudo apt update
+sudo apt install -y fish
+
+curl -fsSL https://claude.ai/install.sh | bash
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+pipx install pyright
+
+wget https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+tar xfz nvim-linux-x86_64.tar.gz
+sudo cp -r nvim-linux-x86_64/bin/ nvim-linux-x86_64/lib/ nvim-linux-x86_64/share/ /usr/local/
+rm -r nvim-linux-x86_64
+rm -r nvim-linux-x86_64.tar.gz
+
+# install zellij
+wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
+tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
+rm zellij-x86_64-unknown-linux-musl.tar.gz
+sudo mv zellij /usr/bin

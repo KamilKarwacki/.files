@@ -3,7 +3,9 @@ echo "running install.sh"
 pwd
 ln -s -f $HOME/.config/coderv2/dotfiles/nvim $HOME/.config/
 
-ln -s -f  $HOME/.config/coderv2/dotfiles/fish_coder $HOME/.config/fish
+ln -snf $HOME/.config/coderv2/dotfiles/fish_coder $HOME/.config/fish
+
+ln -snf $HOME/.config/coderv2/dotfiles/personalize $HOME/personalize
 
 mkdir $HOME/.config/zellij
 ln -s -f $HOME/.config/coderv2/dotfiles/config.kdl $HOME/.config/zellij
@@ -25,17 +27,8 @@ sudo ln -f -s /usr/bin/lldb-dap-19 /usr/bin/lldb-dap
 
 cat ./rc/bashrc_additions >> $HOME/.bashrc
 
-# install zellij
-wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_64-unknown-linux-musl.tar.gz
-tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
-rm zellij-x86_64-unknown-linux-musl.tar.gz
-sudo mv zellij /usr/bin
-
 # uv 
 wget -qO- https://astral.sh/uv/install.sh | sh
-
-# codex
-sudo npm i -g @openai/codex
 
 # estup fish 
 if grep -Fq "exec fish" ~/.bashrc; then
