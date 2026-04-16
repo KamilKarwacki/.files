@@ -2,6 +2,12 @@ require("mason").setup()
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect', 'popup' }
 
+vim.lsp.config('lua_ls', {
+  settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
+})
+vim.lsp.enable({ 'lua-language-server', 'lua_ls'})
+
+-- lsp based auto complete
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -17,20 +23,33 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
     vim.b[ev.buf].buffer_word_autocomplete = true
 
-    vim.api.nvim_create_autocmd('InsertCharPre', {
-      buffer = ev.buf,
-      callback = function()
-        if vim.fn.pumvisible() == 1 or vim.fn.state('m') == 'm' then
-          return
-        end
-        if not vim.v.char:match('[%w_]') then
-          return
-        end
-        vim.api.nvim_feedkeys(vim.keycode('<C-x><C-n>'), 'm', false)
-      end,
-    })
+    -- tab + enter type of choosing 
+    vim.keymap.set('i', '<Tab>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-n>'
+      end
+      return '<Tab>'
+    end, { expr = true })
+
+    vim.keymap.set('i', '<S-Tab>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-p>'
+      end
+      return '<S-Tab>'
+    end, { expr = true })
+
+    vim.keymap.set('i', '<CR>', function()
+      if vim.fn.pumvisible() == 1 then
+        return '<C-y>'
+      end
+      return '<CR>'
+    end, { expr = true })
   end,
 })
+
+-- buffer based auto complete
+vim.o.autocomplete = true
+
 
 vim.lsp.enable('pyright')
 vim.lsp.enable('clangd')

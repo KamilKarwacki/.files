@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
   use 'stevearc/oil.nvim'
 
   -- treesitter
-  use{'nvim-treesitter/nvim-treesitter',  tag = 'v0.10.0', run = ':TSUpdate'}
+  use{'nvim-treesitter/nvim-treesitter',version='main', run = ':TSUpdate'}
   --harpoon by primeagen
   use('theprimeagen/harpoon')
   --undo tree to go back and forth 
