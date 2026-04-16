@@ -6,6 +6,7 @@ ln -s -f $HOME/.config/coderv2/dotfiles/nvim $HOME/.config/
 ln -snf $HOME/.config/coderv2/dotfiles/fish_coder $HOME/.config/fish
 
 ln -snf $HOME/.config/coderv2/dotfiles/personalize $HOME/personalize
+fish -c "set -U IS_CODER 1"
 
 mkdir $HOME/.config/zellij
 ln -s -f $HOME/.config/coderv2/dotfiles/config.kdl $HOME/.config/zellij
