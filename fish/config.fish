@@ -11,6 +11,8 @@ fish_vi_key_bindings
 
 if set -q CODER
     set -gx PATH $PATH $HOME/.config/coderv2/dotfiles/scripts
+    set -gx PATH $PATH $HOME/.opencode/bin/
+    set -gx PATH $PATH $HOME/.local/share/pi-node/node-v22.23.0-linux-x64/bin
     source $HOME/.local/bin/env.fish
 else
     set -gx PATH $PATH $HOME/software/nvim/bin

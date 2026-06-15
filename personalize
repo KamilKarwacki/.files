@@ -3,7 +3,11 @@ sudo apt update
 sudo apt install -y fish
 sudo apt-get install ripgrep
 
+# agents
 curl -fsSL https://claude.ai/install.sh | bash
+curl -fsSL https://chatgpt.com/codex/install.sh | bash
+#curl -fsSL https://pi.dev/install.sh | sh
+#curl -fsSL https://opencode.ai/install | bash
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
@@ -26,6 +30,8 @@ rm zellij-x86_64-unknown-linux-musl.tar.gz
 sudo mv zellij /usr/bin
 
 # sops 
-curl -LO https://github.com/getsops/sops/releases/download/v3.12.2/sops-v3.12.2.linux.amd64
-sudo mv sops-v3.12.2.linux.amd64 /usr/local/bin/sops
-sudo chmod +x /usr/local/bin/sops
+#curl -LO https://github.com/getsops/sops/releases/download/v3.12.2/sops-v3.12.2.linux.amd64
+#sudo mv sops-v3.12.2.linux.amd64 /usr/local/bin/sops
+#sudo chmod +x /usr/local/bin/sops
+
+sudo ~/roof-mlir/packages/roofbench-v3/scripts/setup_cgroups.sh

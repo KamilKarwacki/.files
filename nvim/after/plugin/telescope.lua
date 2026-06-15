@@ -30,3 +30,12 @@ require('telescope').setup{
 		}
 	}
 }
+
+-- Search prompts should not offer insert-mode completion suggestions.
+vim.api.nvim_create_autocmd('FileType', {
+  group = vim.api.nvim_create_augroup('TelescopeNoAutocomplete', { clear = true }),
+  pattern = 'TelescopePrompt',
+  callback = function(ev)
+    vim.bo[ev.buf].autocomplete = false
+  end,
+})

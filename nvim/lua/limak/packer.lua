@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
 
   -- fuzzy finder
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    'nvim-telescope/telescope.nvim', tag = 'v0.2.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
@@ -45,8 +45,6 @@ return require('packer').startup(function(use)
   use 'johnseth97/codex.nvim'
 
   -- call tree
-  use 'ldelossa/litee.nvim'
-  use 'ldelossa/litee-calltree.nvim'
 
   -- needed for live grep 
   use 'BurntSushi/ripgrep'
@@ -56,7 +54,7 @@ return require('packer').startup(function(use)
   use 'stevearc/oil.nvim'
 
   -- treesitter
-  use{'nvim-treesitter/nvim-treesitter',version='main', run = ':TSUpdate'}
+  use{'nvim-treesitter/nvim-treesitter', branch='main', run = ':TSUpdate'}
   --harpoon by primeagen
   use('theprimeagen/harpoon')
   --undo tree to go back and forth 
@@ -66,6 +64,8 @@ return require('packer').startup(function(use)
   use 'voldikss/vim-floaterm'
 
   use 'vimwiki/vimwiki'
+
+  use 'OXY2DEV/markview.nvim'
 
   -- fun stuff
   use 'ianding1/leetcode.vim'
