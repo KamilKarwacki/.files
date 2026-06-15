@@ -1,6 +1,7 @@
 sudo apt-add-repository -y ppa:fish-shell/release-4
 sudo apt update
 sudo apt install -y fish
+sudo apt-get install ripgrep
 
 curl -fsSL https://claude.ai/install.sh | bash
 
@@ -23,3 +24,8 @@ wget https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-x86_6
 tar xfz zellij-x86_64-unknown-linux-musl.tar.gz
 rm zellij-x86_64-unknown-linux-musl.tar.gz
 sudo mv zellij /usr/bin
+
+# sops 
+curl -LO https://github.com/getsops/sops/releases/download/v3.12.2/sops-v3.12.2.linux.amd64
+sudo mv sops-v3.12.2.linux.amd64 /usr/local/bin/sops
+sudo chmod +x /usr/local/bin/sops

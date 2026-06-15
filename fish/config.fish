@@ -9,7 +9,7 @@ alias gits 'git status --ignore-submodules'
 
 fish_vi_key_bindings
 
-if set -q IS_CODER
+if set -q CODER
     set -gx PATH $PATH $HOME/.config/coderv2/dotfiles/scripts
     source $HOME/.local/bin/env.fish
 else
@@ -21,3 +21,5 @@ else
     set -gx PATH $PATH /home/kamil/fun/compilers/llvm-project/build/bin
     eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv | source)
 end
+
+mise activate fish | source
